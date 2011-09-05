@@ -1,0 +1,11 @@
+vdr-plugin-sundtek (0.0.1e-0yavdr0~natty) natty; urgency=low
+
+  * New upstream release
+
+ -- Holger Schvestka <hotzenplotz5@gmx.de>  Wed, 21 Apr 2011 23:31:28 +0200
+
+vdr-plugin-sundtek (0.0.1d-0yavdr0~lucid) lucid; urgency=low
+
+  * Initial release
+
+ -- Holger Schvestka <hotzenplotz5@gmx.de>  Thu, 17 Mar 2011 22:01:02 +0100
