@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Holger Schvestka <hotzenplotz5@gmx.de>
 Build-Depends: cdbs, debhelper (>= 7), vdr-dev (>= 1.7.17), dvb-driver-sundtek-dev
 Standards-Version: 3.9.1
-Homepage: http://home.versanet.de/~lhanisch/
+Homepage: https://github.com/flensrocker/vdr-plugin-sundtek
 
 Package: vdr-plugin-sundtek
 Architecture: any
