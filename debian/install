@@ -1,4 +1,0 @@
-libvdr-sundtek.so.*    usr/lib/vdr/plugins/
-#debian/plugin.sundtek.conf    etc/vdr/plugins/
-#debian/tmp/usr/share/locale
-

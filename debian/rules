@@ -1,20 +1,15 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/debhelper.mk
+#DH_VERBOSE=1
 
-DEB_INSTALL_CHANGELOGS_ALL = HISTORY
+.PHONY: override_dh_strip override_dh_auto_install
 
-MAKE_OPTIONS = DVBDIR=/usr VDRDIR=/usr/include/vdr LIBDIR=. \
-#               LOCALEDIR=debian/tmp/usr/share/locale
+override_dh_strip:
+	dh_strip --dbg-package=vdr-plugin-sundtek-dbg
 
-common-build-arch::
-	$(MAKE) all $(MAKE_OPTIONS)
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/vdr-plugin-sundtek
 
-cleanbuilddir::
-	$(MAKE) -o .dependencies clean $(MAKE_OPTIONS)
-	rm -f libvdr-*.so.*
-
-common-binary-predeb-arch::
-	sh /usr/share/vdr-dev/dependencies.sh
-
+%:
+	dh $@
 
