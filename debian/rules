@@ -2,6 +2,9 @@
 
 #DH_VERBOSE=1
 
+PLG_PACKAGE = $(filter-out %-dbg, $(shell dh_listpackages))
+DBG_PACKAGE = $(filter %-dbg, $(shell dh_listpackages))
+
 .PHONY: override_dh_strip override_dh_auto_install
 
 override_dh_strip:
@@ -10,10 +13,6 @@ override_dh_strip:
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/vdr-plugin-sundtek
 
-override_dh_gencontrol:
-	sh /usr/share/vdr-dev/dependencies.sh
-	dh_gencontrol
-
 %:
-	dh $@
+	dh $@ --with vdrplugin
 
